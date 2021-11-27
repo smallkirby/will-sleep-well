@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/daily_edit_recycler_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/editDaily_editButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/daily_edit_recycler_item_goodtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toStartOf="@+id/daily_edit_recycler_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/daily_edit_recycler_item_title"
+            tools:text="@19:00  important" />
+
+        <ImageButton
+            android:id="@+id/editDaily_editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="@color/skblack"
+            app:layout_constraintBottom_toBottomOf="@+id/daily_edit_recycler_item_goodtime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_edit" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

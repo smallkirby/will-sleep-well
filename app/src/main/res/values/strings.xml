@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Sleeping Kirby</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="daily_timeline">Daily Timeline</string>
+    <string name="define_tasks">Define Tasks</string>
+    <string name="define_events">Define Events</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_define_tasks">Define Daily Tasks</string>
+    <string name="define_daily_tasks_here">Define "Daily Tasks" here. \nDaily Task is a task which must be done in everyday in fixed time. Such as \'Wakeup\', \'Goto bed\', and etc…</string>
+    <string name="add_task">Add Task</string>
+    <string name="remove_task">Remove Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="add_daily_task">Add Daily Task</string>
+    <string name="name">Name</string>
+    <string name="time">Time</string>
+    <string name="importance">Importance</string>
+    <string name="task_name_helper">Wakeup, Sleep, Take a bath…</string>
+    <string name="remove">REMOVE</string>
+    <string name="this_is_remove_tasks_description">Choose tasks to be removed, and push the button to commit.</string>
+    <string name="remove_daily_tasks">Remove Daily Tasks</string>
+    <string name="submit_edit">SUBMIT EDIT</string>
+    <string name="edit_daily_task">Edit Daily Task</string>
+    <string name="remove_event">REMOVE EVENT</string>
+    <string name="hogehogehoge">hogehogehoge</string>
+    <string name="edit_event">EDIT EVENT</string>
+    <string name="define_daily_events">Define Daily Events</string>
+    <string name="add">ADD</string>
+    <string name="hint_edit_name">Coffee, Jogging, Reading...</string>
+    <string name="good_time">Good Time</string>
+    <string name="bad_time">Bad Time</string>
+    <string name="time_to">TIME TO</string>
+    <string name="time_from">TIME FROM</string>
+    <string name="add_daily_event">Add Daily Event</string>
+    <string name="edit_daily_events">Edit Daily Events</string>
+</resources>

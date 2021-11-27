@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".definetask.edit.DoEditTaskFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title_do_edit_task"
+        style="@style/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/title_margin_left"
+        android:layout_marginTop="@dimen/title_margin_top"
+        android:text="@string/edit_daily_task"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/task_name_label"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_do_edit_task" />
+
+    <TextView
+        android:id="@+id/task_time_label"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+    <TextView
+        android:id="@+id/task_importance_label"
+        style="@style/label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/importance"
+        app:layout_constraintStart_toStartOf="@+id/edit_task_time_input"
+        app:layout_constraintTop_toBottomOf="@+id/edit_task_time_input" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:textColorHint="@color/skwhite_dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/task_name_label"
+        app:layout_constraintTop_toBottomOf="@+id/task_name_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_task_name_input"
+            android:background="@color/skblack_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/task_name_helper"
+            android:textColor="@color/skwhite"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/edit_task_time_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:inputType="time"
+        android:textColor="@color/skwhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/task_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/task_time_label" />
+
+    <Spinner
+        android:id="@+id/edit_task_importance_spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/task_importance_label"
+        app:layout_constraintTop_toBottomOf="@+id/task_importance_label" />
+
+    <Button
+        android:id="@+id/do_edit_task_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/submit_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

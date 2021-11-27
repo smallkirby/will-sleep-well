@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_define_tasks"
+    app:startDestination="@id/defineTaskFragment"
+>
+
+    <fragment
+        android:id="@+id/defineTaskFragment"
+        android:name="com.example.sleepingkirby.definetask.DefineTaskFragment"
+        android:label="fragment_define_task"
+        tools:layout="@layout/fragment_define_task" >
+        <action
+            android:id="@+id/action_defineTaskFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_defineTaskFragment_to_removeTaskFragment"
+            app:destination="@id/removeTaskFragment" />
+        <action
+            android:id="@+id/action_defineTaskFragment_to_editTaskFragment"
+            app:destination="@id/editTaskFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.example.sleepingkirby.definetask.add.AddTaskFragment"
+        android:label="fragment_add_task"
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_defineTaskFragment"
+            app:destination="@id/defineTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeTaskFragment"
+        android:name="com.example.sleepingkirby.definetask.remove.RemoveTaskFragment"
+        android:label="fragment_remove_task"
+        tools:layout="@layout/fragment_remove_task" >
+        <action
+            android:id="@+id/action_removeTaskFragment_to_defineTaskFragment"
+            app:destination="@id/defineTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editTaskFragment"
+        android:name="com.example.sleepingkirby.definetask.edit.EditTaskFragment"
+        android:label="fragment_edit_task"
+        tools:layout="@layout/fragment_edit_task" >
+        <action
+            android:id="@+id/action_editTaskFragment_to_doEditTaskFragment"
+            app:destination="@id/doEditTaskFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/doEditTaskFragment"
+        android:name="com.example.sleepingkirby.definetask.edit.DoEditTaskFragment"
+        android:label="fragment_do_edit_task"
+        tools:layout="@layout/fragment_do_edit_task" >
+        <action
+            android:id="@+id/action_doEditTaskFragment_to_editTaskFragment"
+            app:destination="@id/editTaskFragment" />
+        <argument
+            android:name="taskId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

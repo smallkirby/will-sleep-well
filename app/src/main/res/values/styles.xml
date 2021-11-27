@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="title">
+        <item name="android:textColor">@color/skwhite_light</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Large</item>
+        <item name="android:textSize">@dimen/title_size</item>
+    </style>
+
+    <style name="label">
+        <item name="android:textColor">@color/skwhite</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Medium</item>
+        <item name="android:textSize">@dimen/label_size</item>
+    </style>
+</resources>

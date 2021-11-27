@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.sleepingkirby.MainActivity">
+    <item
+        android:id="@+id/action_define_tasks"
+        android:orderInCategory="100"
+        android:title="@string/define_tasks"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_define_events"
+        android:orderInCategory="101"
+        android:title="@string/define_events"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_define_events"
+    app:startDestination="@id/defineEventFragment">
+
+    <fragment
+        android:id="@+id/defineEventFragment"
+        android:name="com.example.sleepingkirby.defineevent.DefineEventFragment"
+        android:label="fragment_define_event"
+        tools:layout="@layout/fragment_define_event" >
+        <action
+            android:id="@+id/action_defineEventFragment_to_addEventFragment"
+            app:destination="@id/addEventFragment" />
+        <action
+            android:id="@+id/action_defineEventFragment_to_editEventFragment"
+            app:destination="@id/editEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addEventFragment"
+        android:name="com.example.sleepingkirby.defineevent.add.AddEventFragment"
+        android:label="fragment_add_event"
+        tools:layout="@layout/fragment_add_event" >
+        <action
+            android:id="@+id/action_addEventFragment_to_defineEventFragment"
+            app:destination="@id/defineEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editEventFragment"
+        android:name="com.example.sleepingkirby.defineevent.edit.EditEventFragment"
+        android:label="fragment_edit_even"
+        tools:layout="@layout/fragment_edit_event" >
+        <action
+            android:id="@+id/action_editEventFragment_to_doEditEventFragment"
+            app:destination="@id/doEditEventFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doEditEventFragment"
+        android:name="com.example.sleepingkirby.defineevent.edit.DoEditEventFragment"
+        android:label="fragment_do_edit_event"
+        tools:layout="@layout/fragment_do_edit_event" >
+        <action
+            android:id="@+id/action_doEditEventFragment_to_editEventFragment"
+            app:destination="@id/editEventFragment" />
+        <argument
+            android:name="eventId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

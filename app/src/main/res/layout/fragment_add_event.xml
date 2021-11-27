@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".defineevent.add.AddEventFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/add_even_badtime_start_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_clock_plus"
+            android:text="@string/time_from"
+            app:layout_constraintStart_toStartOf="@+id/event_badtime_label"
+            app:layout_constraintTop_toBottomOf="@+id/event_badtime_label" />
+
+        <Button
+            android:id="@+id/add_even_badtime_end_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_clock_plus"
+            android:text="@string/time_to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_even_badtime_start_button"
+            app:layout_constraintTop_toTopOf="@+id/add_even_badtime_start_button" />
+
+        <TextView
+            android:id="@+id/title_add_event"
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/title_margin_left"
+            android:layout_marginTop="@dimen/title_margin_top"
+            android:text="@string/add_daily_event"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_name_label"
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_add_event" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:textColorHint="@color/skwhite_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/event_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/event_name_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_event_name_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/skblack_light"
+                android:hint="@string/hint_edit_name"
+                android:maxLines="1"
+                android:textColor="@color/skwhite" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/event_goodtime_label"
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/good_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+        <TextView
+            android:id="@+id/event_badtime_label"
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/bad_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_even_goodtime_start_button" />
+
+
+        <TextView
+            android:id="@+id/event_importance_label"
+            style="@style/label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/importance"
+            app:layout_constraintStart_toStartOf="@+id/event_badtime_label"
+            app:layout_constraintTop_toBottomOf="@+id/add_even_badtime_start_button" />
+
+        <Spinner
+            android:id="@+id/add_event_importance_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:popupBackground="@color/skblack_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/add_even_badtime_start_button"
+            app:layout_constraintTop_toBottomOf="@+id/event_importance_label" />
+
+        <Button
+            android:id="@+id/add_event_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:drawableLeft="@drawable/ic_plus"
+            android:text="@string/add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/add_even_goodtime_start_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_clock_plus"
+            android:text="@string/time_from"
+            app:layout_constraintStart_toStartOf="@+id/event_goodtime_label"
+            app:layout_constraintTop_toBottomOf="@+id/event_goodtime_label" />
+
+        <Button
+            android:id="@+id/add_even_goodtime_end_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:drawableLeft="@drawable/ic_clock_plus"
+            android:text="@string/time_to"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_even_goodtime_start_button"
+            app:layout_constraintTop_toTopOf="@+id/add_even_goodtime_start_button" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/event_icons_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/add_event_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/event_importance_label"
+            app:layout_constraintTop_toBottomOf="@+id/add_event_importance_spinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
