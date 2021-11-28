@@ -17,8 +17,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sleepingkirby.R
 import com.example.sleepingkirby.SleepingApplication
-import com.example.sleepingkirby.database.dailyevent.*
-import com.example.sleepingkirby.database.dailytask.Importance
+import com.example.sleepingkirby.database.definition.event.*
 import com.example.sleepingkirby.definetask.add.ImportanceAdapter
 import com.orhanobut.logger.Logger
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -30,7 +29,7 @@ class AddEventFragment : Fragment() {
 
     @InternalCoroutinesApi
     private val dailyEventViewModel: DailyEventViewModel by viewModels {
-        DailyEventViewModelFactory((activity?.application as SleepingApplication).eventRepository)
+        DailyEventViewModelFactory((activity?.application as SleepingApplication).definitionRepository)
     }
 
     override fun onCreateView(

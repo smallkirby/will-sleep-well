@@ -8,9 +8,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sleepingkirby.R
-import com.example.sleepingkirby.database.dailytask.DailyTask
+import com.example.sleepingkirby.database.definition.event.DailyTask
 
-open class DailyTaskListCheckboxAdapter(private val callback: (name: String) -> Unit): ListAdapter<DailyTask, DailyTaskListCheckboxAdapter.DailyTaskViewHolder>(DailyTaskComparator()) {
+open class DailyTaskListCheckboxAdapter(private val callback: (id: Int) -> Unit): ListAdapter<DailyTask, DailyTaskListCheckboxAdapter.DailyTaskViewHolder>(DailyTaskComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DailyTaskViewHolder {
         return DailyTaskViewHolder.create(parent)
@@ -27,14 +27,12 @@ open class DailyTaskListCheckboxAdapter(private val callback: (name: String) -> 
         val name: String
             get() = dailyTaskItemView.text.toString()
 
-        fun bind(task: DailyTask, callback: (String) -> Unit) {
+        fun bind(task: DailyTask, callback: (id: Int) -> Unit) {
             dailyTaskItemView.text = task.name
             dailyTaskItemView.setOnClickListener {
-                callback(task.name)
+                callback(task.id)
             }
         }
-
-        fun isSelected() = dailyTaskItemView.isSelected
 
         companion object {
             fun create(parent: ViewGroup): DailyTaskViewHolder {

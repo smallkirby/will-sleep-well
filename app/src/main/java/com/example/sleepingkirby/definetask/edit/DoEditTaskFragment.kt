@@ -14,10 +14,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.sleepingkirby.R
 import com.example.sleepingkirby.SleepingApplication
-import com.example.sleepingkirby.database.dailytask.DailyTask
-import com.example.sleepingkirby.database.dailytask.DailyTaskViewModel
-import com.example.sleepingkirby.database.dailytask.DailyTaskViewModelFactory
-import com.example.sleepingkirby.database.dailytask.Importance
+import com.example.sleepingkirby.database.definition.event.DailyTask
+import com.example.sleepingkirby.database.definition.event.Importance
+import com.example.sleepingkirby.database.definition.event.dailytask.DailyTaskViewModel
+import com.example.sleepingkirby.database.definition.event.dailytask.DailyTaskViewModelFactory
 import com.example.sleepingkirby.definetask.add.ImportanceAdapter
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -28,7 +28,7 @@ class DoEditTaskFragment : Fragment() {
 
     @InternalCoroutinesApi
     private val dailyTaskViewModel: DailyTaskViewModel by viewModels {
-        DailyTaskViewModelFactory((activity?.application as SleepingApplication).taskRepository)
+        DailyTaskViewModelFactory((activity?.application as SleepingApplication).definitionRepository)
     }
 
     override fun onCreateView(

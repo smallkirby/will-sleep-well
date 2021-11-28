@@ -8,15 +8,14 @@ import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sleepingkirby.R
-import com.example.sleepingkirby.database.dailyevent.EventIcon
+import com.example.sleepingkirby.database.definition.event.EventIcon
 
 class IconsListAdapter(private val callback: (id: Int) -> Boolean): RecyclerView.Adapter<IconsListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val button: ImageButton
+        val button: ImageButton = view.findViewById(R.id.iconsRecyclerImage)
 
         init {
-            button = view.findViewById(R.id.iconsRecyclerImage)
             button.setOnClickListener {
             }
         }

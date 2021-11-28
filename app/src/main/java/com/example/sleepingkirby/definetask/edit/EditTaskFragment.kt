@@ -5,23 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.*
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sleepingkirby.R
 import com.example.sleepingkirby.SleepingApplication
-import com.example.sleepingkirby.database.dailytask.DailyTask
-import com.example.sleepingkirby.database.dailytask.DailyTaskViewModel
-import com.example.sleepingkirby.database.dailytask.DailyTaskViewModelFactory
+import com.example.sleepingkirby.database.definition.event.DailyTask
+import com.example.sleepingkirby.database.definition.event.dailytask.DailyTaskViewModel
+import com.example.sleepingkirby.database.definition.event.dailytask.DailyTaskViewModelFactory
 import kotlinx.coroutines.InternalCoroutinesApi
 
 class EditTaskFragment : Fragment() {
 
     @InternalCoroutinesApi
     private val dailyTaskViewModel: DailyTaskViewModel by viewModels {
-        DailyTaskViewModelFactory((activity?.application as SleepingApplication).taskRepository)
+        DailyTaskViewModelFactory((activity?.application as SleepingApplication).definitionRepository)
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

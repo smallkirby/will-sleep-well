@@ -11,9 +11,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sleepingkirby.R
-import com.example.sleepingkirby.database.dailyevent.DailyEvent
+import com.example.sleepingkirby.database.definition.event.DailyEvent
 
-open class DailyEventListEditAdapter(val callback: (DailyEvent) -> Unit): ListAdapter<DailyEvent, DailyEventListEditAdapter.DailyEventViewHolder>(DailyEventComparator()) {
+open class DailyEventListEditAdapter(private val callback: (DailyEvent) -> Unit): ListAdapter<DailyEvent, DailyEventListEditAdapter.DailyEventViewHolder>(DailyEventComparator()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DailyEventViewHolder {
         return DailyEventViewHolder.create(parent)

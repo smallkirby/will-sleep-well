@@ -11,17 +11,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sleepingkirby.R
 import com.example.sleepingkirby.SleepingApplication
-import com.example.sleepingkirby.database.dailyevent.DailyEvent
-import com.example.sleepingkirby.database.dailyevent.DailyEventViewModel
-import com.example.sleepingkirby.database.dailyevent.DailyEventViewModelFactory
-import com.orhanobut.logger.Logger
+import com.example.sleepingkirby.database.definition.event.DailyEvent
+import com.example.sleepingkirby.database.definition.event.DailyEventViewModel
+import com.example.sleepingkirby.database.definition.event.DailyEventViewModelFactory
 import kotlinx.coroutines.InternalCoroutinesApi
 
 class EditEventFragment : Fragment() {
 
     @InternalCoroutinesApi
     private val dailyEventViewModel: DailyEventViewModel by viewModels {
-        DailyEventViewModelFactory((activity?.application as SleepingApplication).eventRepository)
+        DailyEventViewModelFactory((activity?.application as SleepingApplication).definitionRepository)
     }
 
     override fun onCreateView(

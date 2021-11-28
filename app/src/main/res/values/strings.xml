@@ -41,4 +41,5 @@
     <string name="time_from">TIME FROM</string>
     <string name="add_daily_event">Add Daily Event</string>
     <string name="edit_daily_events">Edit Daily Events</string>
+    <string name="log">LOG</string>
 </resources>

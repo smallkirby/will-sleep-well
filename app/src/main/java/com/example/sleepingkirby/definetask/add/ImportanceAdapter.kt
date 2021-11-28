@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.SpinnerAdapter
 import android.widget.TextView
-import com.example.sleepingkirby.database.dailytask.Importance
+import com.example.sleepingkirby.database.definition.event.Importance
 
 class ImportanceAdapter(val context: Context): SpinnerAdapter, BaseAdapter() {
 

@@ -1,10 +1,10 @@
 package com.example.sleepingkirby
 
 import android.app.Application
-import com.example.sleepingkirby.database.dailyevent.DailyEventDatabase
-import com.example.sleepingkirby.database.dailyevent.DailyEventRepository
-import com.example.sleepingkirby.database.dailytask.DailyTaskDatabase
-import com.example.sleepingkirby.database.dailytask.DailyTaskRepository
+import com.example.sleepingkirby.database.definition.DailyDefinitionDatabase
+import com.example.sleepingkirby.database.definition.DailyDefinitionRepository
+import com.example.sleepingkirby.database.log.DailyLogDataBase
+import com.example.sleepingkirby.database.log.DailyLogRepository
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.Logger
 import kotlinx.coroutines.CoroutineScope
@@ -15,14 +15,15 @@ class SleepingApplication: Application() {
     private val applicationScope = CoroutineScope(SupervisorJob())
 
     @InternalCoroutinesApi
-    val taskDatabase by lazy { DailyTaskDatabase.getDatabase(this, applicationScope) }
+    val definitionDatabase by lazy { DailyDefinitionDatabase.getDatabase(this, applicationScope) }
     @InternalCoroutinesApi
-    val taskRepository by lazy { DailyTaskRepository(taskDatabase.dailyTaskDao()) }
+    val definitionRepository by lazy { DailyDefinitionRepository(definitionDatabase.dailyDefinitionDao()) }
 
     @InternalCoroutinesApi
-    val eventDatabase by lazy { DailyEventDatabase.getDatabase(this, applicationScope) }
+    val logDatabase by lazy { DailyLogDataBase.getDatabase(this, applicationScope) }
     @InternalCoroutinesApi
-    val eventRepository by lazy { DailyEventRepository(eventDatabase.dailyEventDao()) }
+    val logRespository by lazy { DailyLogRepository(logDatabase.dailyLogDao()) }
+
 
     init {
         Logger.addLogAdapter(AndroidLogAdapter())

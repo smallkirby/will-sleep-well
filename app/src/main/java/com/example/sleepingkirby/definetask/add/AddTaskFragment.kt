@@ -10,10 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.sleepingkirby.R
 import com.example.sleepingkirby.SleepingApplication
-import com.example.sleepingkirby.database.dailytask.DailyTask
-import com.example.sleepingkirby.database.dailytask.DailyTaskViewModel
-import com.example.sleepingkirby.database.dailytask.DailyTaskViewModelFactory
-import com.example.sleepingkirby.database.dailytask.Importance
+import com.example.sleepingkirby.database.definition.event.DailyTask
+import com.example.sleepingkirby.database.definition.event.Importance
+import com.example.sleepingkirby.database.definition.event.dailytask.DailyTaskViewModel
+import com.example.sleepingkirby.database.definition.event.dailytask.DailyTaskViewModelFactory
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.InternalCoroutinesApi
 import java.lang.NumberFormatException
@@ -22,7 +22,7 @@ class AddTaskFragment : Fragment() {
 
     @InternalCoroutinesApi
     private val dailyTaskViewModel: DailyTaskViewModel by viewModels {
-        DailyTaskViewModelFactory((activity?.application as SleepingApplication).taskRepository)
+        DailyTaskViewModelFactory((activity?.application as SleepingApplication).definitionRepository)
     }
     @InternalCoroutinesApi
     override fun onCreateView(
